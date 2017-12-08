@@ -99,11 +99,11 @@ public class DataService  {
 		});
 	}
 
-	public IEnumerable<Person> GetTeddy(){
+	public IEnumerable<Teddy> GetTeddy(){
 		return _connection.Table<Teddy>();
 	}
 
-	public IEnumerable<Person> GetTeddyNamedRoberto(){
+	public IEnumerable<Teddy> GetTeddyNamedRoberto(){
 		return _connection.Table<Teddy>().Where(x => x.Name == "Roberto");
 	}
 
@@ -111,8 +111,8 @@ public class DataService  {
 		return _connection.Table<Teddy>().Where(x => x.Name == "Johnny").FirstOrDefault();
 	}
 
-	public Person CreatePerson(){
-		var p = new Person{
+	public Person CreateTeddy(){
+		var p = new Teddy{
 				Name = "Johnny",
 				Surname = "Mnemonic",
 				Age = 21
