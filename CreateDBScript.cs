@@ -42,16 +42,16 @@ public class CreateDBScript : MonoBehaviour {
         var ds = new DataService("tempDatabase.db");  //constructor of DataService() takes db string name. 
         ds.CreateDB();                      ///creates database from DataService.cs
         
-        var people = ds.GetPersons ();  //returns a connection to people TABLE 
-        ToConsole (people);
-        people = ds.GetPersonsNamedRoberto ();
+        var people = ds.GetTeddy ();  //returns a connection to people TABLE 
+        ToConsole (teddy);
+        teddy = ds.GetTeddyNamedRoberto ();
         ToConsole("Searching for Roberto ...");
-        ToConsole (people); 
+        ToConsole (teddy); 
     }
 	
-	private void ToConsole(IEnumerable<Person> people){  //enumerable list passed
-		foreach (var person in people) {
-			ToConsole(person.ToString());
+	private void ToConsole(IEnumerable<Teddy> teddy){  //enumerable list passed
+		foreach (var teddy in Tedyy) {
+			ToConsole(teddy.ToString());
 		}
 	}
 	
