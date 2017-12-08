@@ -107,11 +107,11 @@ public class DataService  {
 		return _connection.Table<Teddy>().Where(x => x.Name == "Roberto");
 	}
 
-	public Person GetJohnny(){
+	public Teddy GetJohnny(){
 		return _connection.Table<Teddy>().Where(x => x.Name == "Johnny").FirstOrDefault();
 	}
 
-	public Person CreateTeddy(){
+	public Teddy CreateTeddy(){
 		var p = new Teddy{
 				Name = "Johnny",
 				Surname = "Mnemonic",
