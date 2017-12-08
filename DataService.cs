@@ -65,7 +65,7 @@ public class DataService  {
 		_connection.CreateTable<Person> ();
 
         _connection.InsertAll(new[]{
-            new Person{
+            new Teddy{
                 Id = 1,
                 Name = "Tom",
                 Surname = "Perez",
@@ -75,21 +75,21 @@ public class DataService  {
 
 
     },
-			new Person{
+			new Teddy{
 				Id = 2,
 				Name = "Fred",
 				Surname = "Arthurson",
 				Age = 16,
                 Pic = new byte[] { 2, 0, 0, 25 }
             },
-			new Person{
+			new Teddy{
 				Id = 3,
 				Name = "John",
 				Surname = "Doe",
 				Age = 25,
                 Pic = new byte[] { 3, 0, 0, 25 }
             },
-			new Person{
+			new Teddy{
 				Id = 4,
 				Name = "Roberto",
 				Surname = "Huertas",
@@ -99,16 +99,16 @@ public class DataService  {
 		});
 	}
 
-	public IEnumerable<Person> GetPersons(){
-		return _connection.Table<Person>();
+	public IEnumerable<Person> GetTeddy(){
+		return _connection.Table<Teddy>();
 	}
 
-	public IEnumerable<Person> GetPersonsNamedRoberto(){
-		return _connection.Table<Person>().Where(x => x.Name == "Roberto");
+	public IEnumerable<Person> GetTeddyNamedRoberto(){
+		return _connection.Table<Teddy>().Where(x => x.Name == "Roberto");
 	}
 
 	public Person GetJohnny(){
-		return _connection.Table<Person>().Where(x => x.Name == "Johnny").FirstOrDefault();
+		return _connection.Table<Teddy>().Where(x => x.Name == "Johnny").FirstOrDefault();
 	}
 
 	public Person CreatePerson(){
