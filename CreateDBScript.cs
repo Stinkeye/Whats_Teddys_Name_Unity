@@ -42,7 +42,7 @@ public class CreateDBScript : MonoBehaviour {
         var ds = new DataService("tempDatabase.db");  //constructor of DataService() takes db string name. 
         ds.CreateDB();                      ///creates database from DataService.cs
         
-        var people = ds.GetTeddy ();  //returns a connection to people TABLE 
+        var teddy = ds.GetTeddy ();  //returns a connection to people TABLE 
         ToConsole (teddy);
         teddy = ds.GetTeddyNamedRoberto ();
         ToConsole("Searching for Roberto ...");
