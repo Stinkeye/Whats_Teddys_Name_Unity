@@ -50,7 +50,7 @@ public class CreateDBScript : MonoBehaviour {
     }
 	
 	private void ToConsole(IEnumerable<Teddy> teddy){  //enumerable list passed
-		foreach (var teddy in Tedyy) {
+		foreach (var teddy in Teddy) {
 			ToConsole(teddy.ToString());
 		}
 	}
